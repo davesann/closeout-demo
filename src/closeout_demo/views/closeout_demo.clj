@@ -59,6 +59,7 @@
   [:div {:class "fb-like"
          :data-href "http://closeout-demo.herokuapp.com/" 
          :data-send "true"
+         ;; comment next item for facebbok blurb
          :data-layout "button_count"
          :data-width "450" 
          :data-show-faces "true"}
@@ -128,9 +129,10 @@
        [:td [:a {:href "https://github.com/davesann/closeout-demo-cljs"} 
              "https://github.com/davesann/closeout-demo-cljs"]]]
       [:tr [:td] [:td "&nbsp;"]]
-      [:tr [:td] [:td google+1-html]]
-      [:tr [:td] [:td facebook-like-html]]
-      [:tr [:td] [:td twitter-html]]
+      [:tr [:td] [:td 
+                  [:div google+1-html]
+                  [:div facebook-like-html]
+                  [:div twitter-html]]]
       ]
      ]
     ]
