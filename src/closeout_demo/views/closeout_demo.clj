@@ -96,7 +96,7 @@
     [:div.title "ClojureScript applications with Closeout"]
     [:div.desc
      [:p "This is a relatively simple demo of ClojureScript using " closeout]
-     [:p "Closeout is a library for " clojurescript " inspired by " knockout
+     [:p "Closeout is an experimental library for " clojurescript " inspired by " knockout
       " and similar libraries for web ui binding."]
      [:p "Choose one of the demo apps below"]
      (app-choice app-id)
