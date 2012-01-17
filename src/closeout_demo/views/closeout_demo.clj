@@ -107,7 +107,7 @@
    
    [:div.postscript
     [:ul
-     [:li "Checkout is currently alpha. Documentation is very light at this point"]
+     [:li "Closeout is currently alpha. Documentation is very light at this point"]
      [:li "The css for this site expects a modern browser"]
      [:table
       [:tr
