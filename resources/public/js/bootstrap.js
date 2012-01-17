@@ -1,0 +1,1 @@
+../../../../closeout-demo-cljs/resources/public/cljs/bootstrap.js

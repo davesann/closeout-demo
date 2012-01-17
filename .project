@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>cljs-todos</name>
-  <comment>FIXME: write this!</comment>
+  <name>closeout-demo</name>
+  <comment>Demo of closeout</comment>
   <projects/>
   <buildSpec>
     <buildCommand>

@@ -1,104 +1,65 @@
-(ns cljs-todos.x.views.css
+(ns closeout-demo.views.css.todos
   (:require 
     [gaka.core :as gaka]
+    [closeout-demo.views.css.utils :as css]
     ))
-
-(defn border-radius [x]
-  (list
-    :border-radius x
-    :-webkit-border-radius x
-    :-moz-border-radius x))
-
-(defn hbox []
-  (list
-    :-webkit-box-orient "horizontal"
-    :display            "-webkit-box"
-    
-    :-moz-box-orient "horizontal"
-    :display         "-moz-box"
-
-    :display    "box"
-    :box-orient "horizontal"
-    ))
-
-(defn boxflex [v]
-  (list
-    :-webkit-box-flex v
-    :-moz-box-flex v
-    :box-flex v))
-
-(defn box-shadow [v]
-  (list
-    :-moz-box-shadow    v
-    :-webkit-box-shadow v
-    :-khtml-box-shadow  v
-    :-o-box-shadow      v
-    :box-shadow         v))
-
-
-(defn border-radius [v]
-  (list
-    :-webkit-border-top-left-radius      v
-    :-webkit-border-top-right-radius     v
-    :-webkit-border-bottom-right-radius  v
-    :-webkit-border-bottom-left-radius   v
-    :-khtml-border-top-left-radius       v
-    :-khtml-border-top-right-radius      v
-    :-khtml-border-bottom-right-radius   v
-    :-khtml-border-bottom-left-radius    v
-    :-moz-border-radius-topleft          v
-    :-moz-border-radius-topright         v
-    :-moz-border-radius-bottomright      v
-    :-moz-border-radius-bottomleft       v
-    :border-top-left-radius              v
-    :border-top-right-radius             v
-    :border-bottom-right-radius          v
-    :border-bottom-left-radius           v
-    ))
-
-(defn transform [v]
-  (list
-    :-o-transform      v
-    :-moz-transform    v
-    :-khtml-transform  v
-    :-webkit-transform v))
 
 
 (def todos-rules
  (list
-   [:.history-list
-    :display "inline-block"
-    :vertical-align "top"
-    :border "1px solid blue"
-    :padding "1em"
-    :width "40%"]
+   [:#app-box
+    [:.postscript
+     :border-top-style "none"
+     :font-size "60%"
+     :margin-top 0
+     :padding-top 0
+     
+     [:a 
+      :color "darkblue"
+      :text-decoration "none"
+      ]
+     
+     
+     ]]
    
-   
-   
-   [:body
+   [:.todoapp
     :background  "#eeeeee"
     :color       "#333333"
     :font-family "'Helvetica Neue', Helvetica, Arial, sans-serif"
     :font-size   "14px"
     :line-height "1.4em"
-    ]
+    :width      "480px"
+    :margin     "0 auto 40px"
+    :background "white"
+    :padding    "20px"
+    :border     "1px solid lightgrey"
+    (css/box-shadow "rgba(0, 0, 0, 0.2) 0 5px 6px 0")
     
-   [:ol
-    :list-style "none"]
-   
-   [:ul
+    [:em
+     :font-style "italic"]
+    
+    [:.last-update
+     ;:padding ".2em"
+     :color "gray"
+     :font-size "40%"]
+    
+    [:.todo-stats-box
+     [:.comment
+      :color "darkred"
+      :font-size "80%"]]
+
+    [:ol
+     :list-style "none"]
+    
+    [:ul
     :list-style "none"]
    
    [:a
     [:img
      :border "none"]]
    
-   [:.todoapp 
-    :width      "480px"
-    :margin     "0 auto 40px"
-    :background "white"
-    :padding    "20px"
-    (box-shadow "rgba(0, 0, 0, 0.2) 0 5px 6px 0")
+  
+    
     
     [:h1
      :font-size   "36px"
@@ -120,7 +81,7 @@
       :outline "none"
       :padding "6px"
       :border "1px solid #999999"
-      (box-shadow "rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset")
+      (css/box-shadow "rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset")
       
       [::-webkit-input-placeholder 
        :font-style "italic"]
@@ -172,7 +133,7 @@
        :outline     "none"
        :padding     "10px 7px 0px 27px"
        :border      "1px solid #999999"
-       (box-shadow "rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset")
+       (css/box-shadow "rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset")
        ]
       ]
      [:.check 
@@ -262,8 +223,8 @@
      :position      "relative"
      :text-align    "center"
      :text-shadow   "0 -1px 1px #111111"
-     (border-radius "4px")
-     (box-shadow "0 1px 2px #000000, inset 0 0 0 1px #222222, inset 0 2px #666666, inset 0 -2px 2px #444444")
+     (css/border-radius "4px")
+     (css/box-shadow "0 1px 2px #000000, inset 0 0 0 1px #222222, inset 0 2px #666666, inset 0 -2px 2px #444444")
      
      :background-color "#3b3b3b"
      :background-image "-moz-linear-gradient(top,#555555,#222222)"
@@ -288,7 +249,7 @@
      :top 0
      :text-align "center"
      :text-shadow "none"
-     (transform "rotate(-90deg)")
+     (css/transform "rotate(-90deg)")
      :width "100%"
      
      ]
@@ -302,7 +263,7 @@
 
 
 
-(def save-css (partial gaka/save-css "resources/public/css/g-todos.css"))
+(def save-css (partial gaka/save-css "resources/public/css/todos.css"))
 
 (apply save-css (concat
                   todos-rules 
