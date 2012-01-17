@@ -13,8 +13,8 @@
   (s/join " " (remove nil? l)))
   
 (def clojurescript [:a {:href "https://github.com/clojure/clojurescript/wiki"} "ClojureScript"])
-(def closeout      [:a.closeout {:href nil} "Closeout"])
-(def knockout      [:a {:href "http://knockoutjs.com/"} "knockoutjs"])
+(def closeout      [:a.closeout {:href "https://github.com/davesann/closeout"} "Closeout"])
+(def knockout      [:a {:href "http://knockoutjs.com/"} "Knockoutjs"])
 
 (defn app-choice [app-id]
   [:div.app-choice
@@ -49,7 +49,8 @@
    [:div.postscript
     [:ul
      [:li "Checkout is currently alpha. Documentation is very light at this point"]
-     [:li "Github: [pending]"]
+     [:li "Github: " [:a {:href "https://github.com/davesann/closeout"} 
+                      "https://github.com/davesann/closeout"]]
      [:li "Clojars [pending]"]
      
      [:li "The css for this site expects a modern browser."]
