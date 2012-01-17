@@ -91,7 +91,7 @@
   ([app-id]
     (hph/html5
       [:head
-       [:title "Todos"]
+       [:title "Closeout Demos"]
        [:meta {:http-equiv "Content-Type" :content "text/html; charset=UTF-8"}]
        (hph/include-css "/css/reset.css")
        (hph/include-css "/css/site.css")
