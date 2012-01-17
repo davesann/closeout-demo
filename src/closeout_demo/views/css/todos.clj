@@ -268,6 +268,6 @@
 (apply save-css (concat
                   todos-rules 
                   tooltip-rules
-                  debug-rules
+                 ; debug-rules
                   ))
 

@@ -14,7 +14,7 @@ This is beacuse it is easier to deploy this way.
 
 ## License
 
-Copyright (C) 2011 Dave Sann
+Copyright (C) 2012 Dave Sann
 
 Distributed under the Eclipse Public License, the same as Clojure.
 
