@@ -47,7 +47,20 @@
      
      :font-size "80%"
      :color "#444444"
-     :font-style "italic"]
+     :font-style "italic"
+     
+     [:a 
+      :color "darkblue"
+      :text-decoration "none"
+      ]
+     
+     [:table
+      :font-style "normal"
+      :margin-left "auto"
+      :margin-right "auto"
+      :margin-top "0.5em"
+      [:td :padding-left "1em"]]
+     ]
     
     [:.button
      :color "darkblue"

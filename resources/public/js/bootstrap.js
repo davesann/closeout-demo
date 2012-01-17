@@ -5773,5 +5773,9 @@ var Zi = Y(["\ufdd0'clock", "\ufdd0'clock2", "\ufdd0'stopwatch", "\ufdd0'todos"]
     }.call(j, Kf.call(j, 2))
   }())}), a = Xf.call(j, a);
   return sh.call(j, "\ufdd0'user/app", a, rc.call(j, "app"), bi)
-}}), $i = ye.call(j, Yc.call(j, document.body, "appChoice"));
-u($i) && $i.call(j, Zi).call(j);
+}}), $i = Yc.call(j, document.body, "appChoice");
+if(u($i)) {
+  var aj = ye.call(j, $i).call(j, Zi);
+  u(aj) && aj.call(j)
+}
+;

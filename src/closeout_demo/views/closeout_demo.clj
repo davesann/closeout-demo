@@ -49,13 +49,30 @@
    [:div.postscript
     [:ul
      [:li "Checkout is currently alpha. Documentation is very light at this point"]
-     [:li "Github: " [:a {:href "https://github.com/davesann/closeout"} 
-                      "https://github.com/davesann/closeout"]]
-     [:li "Clojars [pending]"]
-     
-     [:li "The css for this site expects a modern browser."]
-   ]]]
-   )
+     [:li "The css for this site expects a modern browser"]
+     [:table
+      [:tr
+       [:td "Closeout source" ] 
+       [:td [:a {:href "https://github.com/davesann/closeout"} 
+             "https://github.com/davesann/closeout"]]]
+      [:tr
+       [:td "Closeout jar"]
+       [:td "[clojars Pending]"]]
+      
+      [:tr
+       [:td "This web-app source"]
+       [:td [:a {:href "https://github.com/davesann/closeout-demo"} 
+             "https://github.com/davesann/closeout-demo"]]]
+      
+      [:tr 
+       [:td "Clojurescript source"]
+       [:td [:a {:href "https://github.com/davesann/closeout-demo-cljs"} 
+             "https://github.com/davesann/closeout-demo-cljs"]]]
+      ]
+     ]
+    ]
+   ]
+  )
 
 (def google-analytics
    [:script {:type "text/javascript"}
