@@ -116,8 +116,8 @@
        [:td [:a {:href "https://github.com/davesann/closeout"} 
              "https://github.com/davesann/closeout"]]]
       [:tr
-       [:td "Closeout jar"]
-       [:td "[clojars Pending]"]]
+       [:td "Clojars"]
+       [:td "[closeout \"0.1.0\"]"]]
       
       [:tr
        [:td "This web-app source"]
