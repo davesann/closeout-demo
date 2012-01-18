@@ -2,6 +2,9 @@
 
 Simple noir webapp to deliver example Closeout clojurescript applications
 
+In action here: http://closeout-demo.herokuapp.com/
+
+
 ## Usage
 
 ```
